@@ -75,11 +75,10 @@ navIcon.on('click', function () {
             $(this).removeClass('animate-in');
             $(this).css({
                 opacity: 0,
-                transform: 'translateY(40px)',
-                animationDelay: '0s'
-            });
+                transform: 'translateY(40px)'
         });
-        navIcon.toggleClass('fa-align-justify open-close-icon fa-x');
+     });
+navIcon.toggleClass('fa-align-justify open-close-icon fa-x');
     }
 });
 

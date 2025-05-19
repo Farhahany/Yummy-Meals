@@ -14,7 +14,7 @@ export class Categories {
 export class CategoryMeals {
     async categoryMeals(category) {
         try {
-            const req = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=beef`);
+            const req = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`);
             const response = await req.json(); 
             return response;
         } catch (error) {
