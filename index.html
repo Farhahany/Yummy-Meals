@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yummy Meals</title>
+    <link rel="icon" href="./Images/logo.png">
+    <link rel="stylesheet" href="./CSS/all.min.css">
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+
+<body>
+    <div id="loader">
+        <span class="loader"></span>
+    </div>
+    <nav class="vh-100 position-fixed z-3 d-flex">
+        <div class="text-white bg-black py-4 ps-4 d-flex flex-column justify-content-between fs-7 h-100">
+            <ul id="navList" class="list-unstyled">
+                <li class="mb-3 nav-item">Home</li>
+                <li class="mb-3 nav-item">Search</li>
+                <li class="mb-3 nav-item">Categories</li>
+                <li class="mb-3 nav-item">Area</li>
+                <li class="mb-3 nav-item">Ingredients</li>
+                <li class="mb-3 nav-item">Contact Us</li>
+            </ul>
+            <div>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-solid fa-globe"></i>
+                <p class="text-wrap me-4">Copyright Â© 2019 All Rights <br>
+                    Reserved.</p>
+            </div>
+        </div>
+        <div class="h-100 py-4
+        bg-white d-flex flex-column align-items-center justify-content-between px-1">
+            <img src="Images/logo.png" width="48" height="55">
+            <i class="fa-solid fa-2x fa-align-justify"></i>
+            <div class="d-flex flex-column">
+                <i class="fa-solid fa-globe mb-2"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+            </div>
+        </div>
+    </nav>
+    <section id="home" class="py-4 container">
+        <div id="homeContainer" class="row gy-4">
+        </div>
+    </section>
+    <section id="search" class="py-4 container d-none">
+        <div class="d-md-flex mb-4">
+            <input type="text" class="form-control bg-black mb-3 text-white me-md-3" autocomplete="off" id="mealName"
+                placeholder="Search by meal name">
+            <input type="text" maxlength="1" class="form-control bg-black mb-3 text-white" autocomplete="off" id="mealletter"
+                placeholder="Search by meal first letter">
+        </div>
+        <div id="searchContainer" class="row gy-4">
+        </div>
+    </section>
+    <section id="categories" class="py-4 container d-none">
+        <div id="categoriesContainer" class="row gy-4">
+        </div>
+    </section>
+    <section id="area" class="py-4 container d-none">
+        <div id="areaContainer" class="row gy-4">
+        </div>
+    </section>
+    <section id="ingredients" class="py-4 container d-none">
+        <div id="ingredientsContainer" class="row gy-4">
+        </div>
+    </section>
+    <section id="contact" class="text-center d-flex flex-column align-items-center justify-content-center vh-100 d-none">
+        <div class="row w-75 mb-2">
+            <div class="col-md-6">
+                <input type="text" class="form-control" id="name" placeholder="Enter Your Name" name="name" onblur="blurRegexCheck(this)" oninput="typingRegexCheck(this)">
+                <small class="d-none text-danger d-block text-start">Name must contain at least 3 letters. Only English letters and spaces are allowed.</small>
+                <input type="email" class="form-control mt-3" id="email" placeholder="Enter Your Email" name="email" onblur="blurRegexCheck(this)" oninput="typingRegexCheck(this)">
+                <small class="d-none text-danger d-block text-start">Enter a valid email format (example: name@example.com).</small>
+                <input type="tel" class="form-control mt-3" id="phone" placeholder="Enter Your Phone" name="phone" onblur="blurRegexCheck(this)" oninput="typingRegexCheck(this)">
+                <small class="d-none text-danger d-block text-start">Phone number must be 10 to 15 digits.</small>
+            </div>
+            <div class="col-md-6">
+                <input type="number" class="form-control mt-3 mt-md-0" id="age" placeholder="Enter Your Age" name="age" onblur="blurRegexCheck(this)" oninput="typingRegexCheck(this)">
+                <small class="d-none text-danger d-block text-start">Age must be a number between 14 and 100.</small>
+                <input type="password" class="form-control mt-3" id="password" placeholder="Enter Your Password" name="password" onblur="blurRegexCheck(this)" oninput="typingRegexCheck(this)">
+                <small class="d-none text-danger d-block text-start">Password must be at least 8 characters long and include both letters and numbers.</small>
+                <input type="password" class="form-control mt-3" id="repassword" placeholder="Repassword" name="repassword" onblur="blurRegexCheck(this)" oninput="typingRegexCheck(this)">
+                <small class="d-none text-danger d-block text-start">Passwords must match and be valid.</small>
+            </div>
+        </div>
+        <button type="button" class="btn btn-outline-danger disabled mt-3">Submit</button>
+    </section>
+    <section id="mealDetails" class="py-4 container text-white d-none"></section>
+
+    <script src="./JS/bootstrap.bundle.min.js"></script>
+    <script src="./JS/jquery-3.7.1.min.js"></script>
+    <script type="module" src="./JS/main.js"></script>
+</body>
+
+</html>
